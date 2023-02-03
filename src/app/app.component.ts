@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -9,4 +10,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'authorization';
 
+  constructor(private spinner: NgxSpinnerService) {
+
+
+  }
 }

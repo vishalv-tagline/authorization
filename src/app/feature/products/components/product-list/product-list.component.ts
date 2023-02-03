@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ProductListService } from '../../services/product-list.service';
+
 
 @Component({
   selector: 'app-product-list',
@@ -11,6 +11,8 @@ import { ProductListService } from '../../services/product-list.service';
 export class ProductListComponent implements OnInit {
 
   public products: any = [];
+  public productId!: number;
+  public perProduct: any;
 
   constructor(
     // private productListService: ProductListService,
@@ -28,10 +30,18 @@ export class ProductListComponent implements OnInit {
     //   console.log('this.products :>> ', this.products);
     // })
     // this.spinner.show();
+    // setTimeout(() => {
+    //   this.spinner.hide()
+    // }, 1500)
     console.log('this.activateRoute :>> ', this.activateRoute);
     this.products = this.activateRoute.snapshot.data['productList'].products;
     console.log('this.products :>> ', this.products);
-    // this.spinner.hide();
   }
 
+  sendId(productId: number) {
+    console.log('productId :>> ', productId);
+    this.perProduct = this.products.find((data: any,) => { return productId === data.id })
+    console.log('this.perProduct :>> ', this.perProduct);
+    // console.log('this.productId :>> ', this.productId);
+  }
 }

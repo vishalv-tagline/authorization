@@ -12,7 +12,9 @@ import { ProductListService } from '../services/product-list.service';
   providedIn: 'root'
 })
 export class ProductsResolver implements Resolve<boolean> {
+
   constructor(private productListService: ProductListService) { }
+
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
     return this.productListService.getProduct();
   }

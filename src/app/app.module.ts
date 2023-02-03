@@ -9,19 +9,24 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductsInterceptor } from './shared/interceptor/products.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
-    NgxSpinnerModule.forRoot({ type: "square-jelly-box" })
+    BrowserAnimationsModule,
+    NgxSpinnerModule.forRoot(),
+    FormsModule
   ],
   providers: [
     {
