@@ -1,4 +1,3 @@
-import { HtmlTagDefinition } from '@angular/compiler';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

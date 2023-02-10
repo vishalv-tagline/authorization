@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { DemoPipesComponent } from './demo-pipes/demo-pipes.component';
+import { DemoPipesComponent } from './components/demo-pipes/demo-pipes.component';
 import { CustomePipe } from './pipes/custome.pipe';
 import { FormsModule } from '@angular/forms';
 import { MaxLengthPipe } from './pipes/max-length.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MaxLengthPipe } from './pipes/max-length.pipe';
     ProductListComponent,
     DemoPipesComponent,
     CustomePipe,
-    MaxLengthPipe
+    MaxLengthPipe,
+    FilterPipe
   ],
   imports: [
     CommonModule,
