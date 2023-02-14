@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <h2 class="mt-2">DebounceTime and DistinctUntilChanged Operator</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-6">
+            <h5 class="h5 text-primary text-center">DebounceTime Operator</h5>
+            <hr>
+            <div>
+                <input class="form-control form-control-lg" type="text" placeholder="Search here...." name="inputBox"
+                    #inputBox>
+            </div>
+            <p *ngIf="reqData !=null " class="mx-2 mt-2">Request Data : <span class="text-success">{{reqData}}</span>
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <h5 class="h5 text-primary text-center">DistinctUntilChanged Operator</h5>
+            <hr>
+            <div>
+                <input class="form-control form-control-lg" type="text" placeholder="Search here...." name="inputBox2"
+                    #inputBox2>
+            </div>
+            <p *ngIf="reqData2 !=null " class="mx-2 mt-2">Request Data : <span class="text-success">{{reqData2}}</span>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <h2 class="h2 mt-2">Raplay Operator</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h3>{{methodInterval?'Interval Start':'Add Videos'}}</h3>
+                </div>
+                <div>
+                    <button class="btn btn-lg btn-success" type="button" (click)="toggleMethod()">Toggle Method</button>
+                </div>
+            </div>
+            <div *ngIf="!methodInterval" class="row">
+                <div class="col-lg-6">
+                    <input type="text" class="form-control form-control-lg" name="videoAdd" #videoAdd>
+                </div>
+                <div class="col-lg-2">
+                    <button class="btn btn-lg btn-primary" type="button" (click)="addVideo(videoAdd.value)">Video
+                        +</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h4 class="h4">User-01</h4>
+            <hr>
+            <ul class="techList">
+                <li *ngFor="let data of listData1">{{data}}</li>
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <h4 class="h4">User-02</h4>
+            <hr>
+            <ul class="techList">
+                <li *ngFor="let data of listData2">{{data}}</li>
+            </ul>
+            <button class="btn" (click)="subscribeUser1()"
+                [ngClass]="subscriptionMode1?'btn-danger':'btn-success'">{{subscriptionMode1?'Unsubscribe':'Subscribe'}}
+            </button>
+        </div>
+        <div class="col-lg-4">
+            <h4 class="h4">User-03</h4>
+            <hr>
+            <ul class="techList">
+                <li *ngFor="let data of listData3">{{data}}</li>
+            </ul>
+            <button class="btn" (click)="subscribeUser2()"
+                [ngClass]="subscriptionMode2?'btn-danger':'btn-success'">{{subscriptionMode2?'Unsubscribe':'Subscribe'}}
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <h2 class="h2 mt-2">Custome Observable</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Custome Observable (Manual)</h3>
+            <hr>
+            <ul [ngClass]="techStatus == 'completed'? 'completed' :techStatus == 'error'? 'error':''" class="techList"
+                id="container1">
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <h3>Custome Interval Observable</h3>
+            <hr>
+            <ul [ngClass]="techStatus2 == 'completed'? 'completed' :techStatus2 == 'error'? 'error':''" class="techList"
+                class="techList" id="container2">
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Random Names</h3>
+            <hr>
+            <p>Current Name : <span class="text-danger fs-5">{{perticularName}}</span></p>
+        </div>
+    </div>
+</div>

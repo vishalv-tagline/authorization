@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <h2>Filter Operator</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h3>Name Length wise filter</h3>
+            <hr>
+            <table class="table border">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of studentsData">
+                        <td>{{student.id}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.gender}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <h3>Gender wise filter</h3>
+            <hr>
+            <table class="table border">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of studentsData">
+                        <td>{{student.id}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.gender}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

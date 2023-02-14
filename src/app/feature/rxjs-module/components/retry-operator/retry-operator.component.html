@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <h2 class="h2 mt-2">Retry Operator</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-6">
+            <!-- <button type="button" class="mb-2" (click)="getDatas()">Fetch Data</button> -->
+            <button class="btn btn-primary mb-2" (click)="getDatas()" type="button">
+                <span *ngIf="fetching" class="spinner-border spinner-border-sm " role="status"
+                    aria-hidden="true"></span>
+                {{fetching? 'Fetching...':'Fetch Data'}}
+            </button>
+            <div class="mt-2">
+                <p>
+                    Status : <span class="fw-bold"
+                        [ngClass]="{'text-success':dataFetching === 'Data Fetched','text-danger':dataFetching === 'Problem Feting Data...'}">{{dataFetching}}</span>
+                </p>
+            </div>
+            <table class="table">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>E-mail</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let productsData of productsDatas.users">
+                        <td>{{productsData.id}}</td>
+                        <td>{{productsData.firstName}}</td>
+                        <td>{{productsData.lastName}}</td>
+                        <td>{{productsData.email}}</td>
+                        <td>{{productsData.gender}}</td>
+                    </tr>
+                    <tr *ngIf="productsDatas.length === 0">
+                        <td class="text-danger text-center" colspan="5">No recored found</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

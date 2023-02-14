@@ -9,7 +9,7 @@ import { AddVideosElementService } from '../../services/add-videos-element.servi
 })
 export class FromEventComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('btnAdd') btnAdd!: ElementRef
+  @ViewChild('btnAdd') btnAdd!: ElementRef;
 
   constructor(private addVideosElementService: AddVideosElementService) { }
 

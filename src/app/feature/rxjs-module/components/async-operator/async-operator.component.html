@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h2>Async Operator</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Add Video</h3>
+            <hr>
+            <div class="d-flex">
+                <div class="col-lg-10 mx-2">
+                    <input type="text" class="form-control form-control-lg" name="addVideo" #addVideo>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-lg btn-primary" (click)="addVideos(addVideo.value)">Video
+                        +</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h4 class="h4">User-01</h4>
+            <hr>
+            <ul class="techList">
+                <li>Video : <span>{{videoEmmit}}</span></li>
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <button type="button" class="btn btn-lg btn-primary" (click)="onClickCompleted()">Complete
+                Subscription</button>
+        </div>
+    </div>
+</div>

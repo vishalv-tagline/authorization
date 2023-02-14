@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AsyncOperatorComponent } from './components/async-operator/async-operator.component';
+import { CustomeObservableComponent } from './components/custome-observable/custome-observable.component';
+import { DebounceDistinctUntilChangedComponent } from './components/debounce-distinct-until-changed/debounce-distinct-until-changed.component';
+import { FilterComponent } from './components/filter/filter.component';
 import { FromEventComponent } from './components/from-event/from-event.component';
 import { IntervalAndTimerComponent } from './components/interval-and-timer/interval-and-timer.component';
+import { MapOperatorComponent } from './components/map-operator/map-operator.component';
 import { OffFromComponent } from './components/off-from/off-from.component';
 import { PerOperatorComponent } from './components/per-operator/per-operator.component';
+import { PlukComponent } from './components/pluk/pluk.component';
 import { PromiseExpComponent } from './components/promise-exp/promise-exp.component';
+import { ReplayOperatorComponent } from './components/replay-operator/replay-operator.component';
+import { RetryOperatorComponent } from './components/retry-operator/retry-operator.component';
 import { RxjsOperatorComponent } from './components/rxjs-operator/rxjs-operator.component';
+import { TakeOperatorComponent } from './components/take-operator/take-operator.component';
+import { TapOperatorComponent } from './components/tap-operator/tap-operator.component';
 import { ToArrayComponent } from './components/to-array/to-array.component';
 
 const routes: Routes = [
@@ -22,6 +32,16 @@ const routes: Routes = [
       { path: 'intervalAndTimer', component: IntervalAndTimerComponent },
       { path: 'off-From', component: OffFromComponent },
       { path: 'toArray', component: ToArrayComponent },
+      { path: 'customeObs', component: CustomeObservableComponent },
+      { path: 'mapOperator', component: MapOperatorComponent },
+      { path: 'pluck', component: PlukComponent },
+      { path: 'filter', component: FilterComponent },
+      { path: 'tap', component: TapOperatorComponent },
+      { path: 'take', component: TakeOperatorComponent },
+      { path: 'retry', component: RetryOperatorComponent },
+      { path: 'debouncedistinctuntilchanged', component: DebounceDistinctUntilChangedComponent },
+      { path: 'replayope', component: ReplayOperatorComponent },
+      { path: 'asyncOpe', component: AsyncOperatorComponent },
     ]
   },
   {

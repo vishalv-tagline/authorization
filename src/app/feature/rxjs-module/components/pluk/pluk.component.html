@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <h2 class="h2 text-success mt-2">Pluck Opeerator use</h2>
+            <hr>
+            <table class="table">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let studentName of studentsNames">
+                        <td>{{studentName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <h2 class="h2 text-success mt-2">Nested Pluck Operator use</h2>
+            <hr>
+            <table class="table">
+                <thead class="table table-dark">
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let studentsCounry of studentsAddress">
+                        <td>{{studentsCounry}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
