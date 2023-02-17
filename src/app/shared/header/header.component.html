@@ -30,6 +30,11 @@
                         <a class="nav-link text-white" [routerLink]="'/rxjs/rxjsOperator'"
                             [routerLinkActive]="'isActive'" style="font-size: 23px;">RxjsOperator</a>
                     </li>
+                    <li class="nav-item" *ngIf="badge">
+                        <a class="nav-link text-white" style="font-size: 23px;">
+                            <span class="badge bg-success">Subject Component Inable</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

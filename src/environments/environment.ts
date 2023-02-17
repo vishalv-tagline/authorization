@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  productApi: 'https://dummyjson.com/'
+  productApi: 'https://dummyjson.com/',
+  uxTrenzApi: 'https://my-json-server.typicode.com/Uxtrendz/apis/videoList'
 };
 
 /*

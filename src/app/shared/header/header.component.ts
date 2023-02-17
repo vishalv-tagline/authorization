@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AddVideosElementService } from 'src/app/feature/rxjs-module/services/add-videos-element.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  badge: boolean = false;
+
+  constructor(private addVideosElementService: AddVideosElementService) { }
 
   ngOnInit(): void {
+    this.addVideosElementService.badge.subscribe((res) => {
+      this.badge = res
+    })
   }
+
 
 }

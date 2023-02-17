@@ -1,0 +1,66 @@
+<div class="container-fluid mb-2">
+    <h2 class="h2 mt-2">switchMap Operator</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h3 class="text-center text-success">Map</h3>
+            <hr>
+            <ul class="techList" id="container1"></ul>
+        </div>
+        <div class="col-lg-4">
+            <h3 class="text-center text-success">Map + switchAll</h3>
+            <hr>
+            <ul class="techList" id="container2"></ul>
+        </div>
+        <div class="col-lg-4">
+            <h3 class="text-center text-success">SwitchMap</h3>
+            <hr>
+            <ul class="techList" id="container3"></ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 class="text-danger">Live Example</h2>
+        <div class="mt-2 mb-2">
+            <form action="" #searchData="ngForm">
+                <div class="col-lg-10">
+                    <label class="form-label mx-2 fw-bold">Search Data</label>
+                    <input type="text" class="form-control form-control-lg" name="search" #search
+                        placeholder="Search data here...." required autocomplete="off" ngModel>
+                </div>
+            </form>
+            <hr>
+        </div>
+        <div class="mt-2 mx-auto">
+            <div class="d-flex flex-row justify-content-between">
+                <div>
+                    <h2 class="text-success">Videos List</h2>
+                </div>
+                <div>
+                    <span><span class="text-danger fw-bold">{{searchCount}}</span> Result Found</span>
+                </div>
+            </div>
+            <table class="table border">
+                <thead class="table table-dark border">
+                    <tr>
+                        <th>Id</th>
+                        <th>Thumb</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of apiData;let i=index">
+                        <td>{{i + 1}}</td>
+                        <td>
+                            <img [src]="data.thumb" height="80px" alt="logo">
+                        </td>
+                        <td>
+                            <strong>{{data.title}}</strong>
+                            <p>{{data.description}}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
