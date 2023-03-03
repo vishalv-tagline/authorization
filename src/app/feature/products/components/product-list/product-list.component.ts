@@ -29,7 +29,7 @@ export class ProductListComponent implements OnInit {
     //   this.products = response
     //   console.log('this.products :>> ', this.products);
     // })
-    // this.spinner.show();
+    this.spinner.hide();
     // setTimeout(() => {
     //   this.spinner.hide()
     // }, 1500)
