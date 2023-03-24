@@ -34,8 +34,5 @@ export class ExhaustMapComponent implements OnInit, AfterViewInit {
       console.log('res :>> ', res);
     })
   }
-
-
-
 }
 

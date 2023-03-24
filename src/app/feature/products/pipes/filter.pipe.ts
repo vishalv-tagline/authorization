@@ -9,11 +9,24 @@ export class FilterPipe implements PipeTransform {
     if (!searchTerms) {
       return value;
     }
+    // else {
+    //   let replaceValue = new RegExp(searchTerms, 'igm');
+    //   value = value.replace(replaceValue, `<b><mark>$&</mark></b>`);
+    // }
     else {
-      let replaceValue = new RegExp(searchTerms, 'igm');
-      value = value.replace(replaceValue, `<b><mark>$&</mark></b>`);
+      return value.filter((data: any) => {
+        // console.log('data :>> ', data);
+        return Object.keys(data).some((key) => {
+          return String(data[key]).toLocaleLowerCase().includes(searchTerms.toLocaleLowerCase());
+        })
+      }).map((data: any) => {
+        return {
+          name: data.name.replace(new RegExp(searchTerms, 'gim'), `<b>$&</b>`),
+          gender: data.gender.replace(new RegExp(searchTerms, 'gim'), `<b>$&</b>`),
+          course: data.course.replace(new RegExp(searchTerms, 'gim'), `<b>$&</b>`),
+        };
+      });
     }
-    return value;
   }
 }
     //     else {

@@ -49,5 +49,4 @@ export class RetryOperatorComponent implements OnInit {
       }
     )
   }
-
 }

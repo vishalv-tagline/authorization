@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.addVideosElementService.badge.subscribe((res) => {
-      this.badge = res
+      this.badge = res;
     })
   }
 
