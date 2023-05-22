@@ -11,22 +11,18 @@ export class FromEventComponent implements OnInit, AfterViewInit {
 
   @ViewChild('btnAdd') btnAdd!: ElementRef;
 
-  constructor(private addVideosElementService: AddVideosElementService) { }
+  constructor(
+    private addVideosElementService: AddVideosElementService
+  ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   ngAfterViewInit(): void {
     let count = 1;
     fromEvent(this.btnAdd.nativeElement, 'click').subscribe((res) => {
-      let countValue = 'Video : ' + count++
-      // console.log('res :>> ', res);
-      // console.log('video :>> ', count++);
-      this.addVideosElementService.printElement(countValue, 'eleContainer')
-      this.addVideosElementService.printElement(countValue, 'eleContainer2')
-      // this.printElement(countValue, 'eleContainer');
+      let countValue = 'Video : ' + count++;
+      this.addVideosElementService.printElement(countValue, 'eleContainer');
+      this.addVideosElementService.printElement(countValue, 'eleContainer2');
     })
   }
-
-
 }

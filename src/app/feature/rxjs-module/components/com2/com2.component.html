@@ -1,10 +1,16 @@
 <div class="card">
-    <div class="card-header">
-        Component : 2
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">My name is : <span class="text-primary">{{changeName}}</span></h5>
-        <input type="text" class="form-control" name="changeName" #inputName>
-        <button type="button" class="btn btn-primary mt-2" (click)="onChange(inputName.value)">Change</button>
-    </div>
+  <div class="card-header">Component : 2</div>
+  <div class="card-body">
+    <h5 class="card-title">
+      My name is : <span class="text-primary">{{ changeName }}</span>
+    </h5>
+    <input type="text" class="form-control" name="changeName" #inputName />
+    <button
+      type="button"
+      class="btn btn-primary mt-2"
+      (click)="onChange(inputName.value)"
+    >
+      Change
+    </button>
+  </div>
 </div>
